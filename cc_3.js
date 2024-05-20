@@ -4,10 +4,12 @@ class Car {
         this.make=make;
         this.speed=speed;
     }
-    accelerator () {
+//accelerate method
+    accelerate () {
         this.speed += 10;
         console.log(`New speed:${this.speed} km/h`);
     }
+//brake method
     brake () {
         this.speed -= 5;
         console.log(`New speed:${this.speed} km/h`);
@@ -15,7 +17,14 @@ class Car {
 }
 
 //Example
-exampleCar = new Car('Toyota', 120);
+Car1 = new Car('BMW', 120);
+Car2 = new Car('Mercedes', 95);
 
-console.log(exampleCar.make);
-console.log(exampleCar.speed);
+//Test data
+Car1.accelerate();
+Car1.brake();
+Car1.brake();
+
+Car2.accelerate();
+Car2.accelerate();
+Car2.brake();
